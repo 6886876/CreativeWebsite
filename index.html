@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090914">
+<title>Creative Minded Boy 90 | Official Website</title>
+
+<style>
+* {
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ scroll-behavior:smooth;
+}
+
+body {
+ background:#090914;
+ color:white;
+ font-family:Arial,sans-serif;
+ overflow-x:hidden;
+}
+
+header {
+ position:sticky;
+ top:0;
+ z-index:100;
+ background:#111120;
+ padding:18px 6%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ border-bottom:1px solid #39265b;
+}
+
+.logo {
+ color:#bd91ff;
+ font-size:20px;
+ font-weight:bold;
+}
+
+nav {
+ display:flex;
+ gap:18px;
+ flex-wrap:wrap;
+}
+
+nav a {
+ color:white;
+ text-decoration:none;
+ font-size:13px;
+}
+
+nav a:hover {
+ color:#bd91ff;
+}
+
+.hero {
+ min-height:590px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ padding:70px 20px;
+ background:
+ radial-gradient(ellipse at 50% 0%,#59249b66,transparent 65%),
+ linear-gradient(140deg,#090914,#19102b);
+}
+
+.profile {
+ width:115px;
+ height:115px;
+ border-radius:50%;
+ border:3px solid #bd91ff;
+ box-shadow:0 0 35px #913cff;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-size:48px;
+ margin-bottom:28px;
+ background:#211536;
+}
+
+.tag {
+ color:#d6b8ff;
+ border:1px solid #7545a8;
+ border-radius:30px;
+ padding:10px 20px;
+ margin-bottom:25px;
+ font-size:12px;
+ letter-spacing:2px;
+}
+
+.hero h1 {
+ font-size:clamp(35px,8vw,65px);
+ line-height:1.2;
+ margin-bottom:20px;
+}
+
+.hero h1 span {
+ color:#bd91ff;
+ text-shadow:0 0 25px #9a42ff;
+}
+
+.hero p {
+ max-width:600px;
+ color:#c5bfd2;
+ line-height:1.8;
+}
+
+.buttons {
+ display:flex;
+ gap:15px;
+ flex-wrap:wrap;
+ justify-content:center;
+ margin-top:30px;
+}
+
+.btn {
+ display:inline-block;
+ padding:14px 24px;
+ background:linear-gradient(100deg,#7138dc,#ae4cff);
+ color:white;
+ text-decoration:none;
+ border-radius:9px;
+ font-weight:bold;
+ transition:.3s;
+}
+
+.btn:hover {
+ transform:translateY(-5px);
+ box-shadow:0 0 25px #a34aff;
+}
+
+.secondary {
+ background:#242139;
+ border:1px solid #67458d;
+}
+
+section {
+ padding:75px 7%;
+}
+
+.heading {
+ text-align:center;
+ font-size:32px;
+ margin-bottom:14px;
+}
+
+.heading span {
+ color:#bd91ff;
+}
+
+.subtitle {
+ text-align:center;
+ color:#aaa3b8;
+ line-height:1.7;
+ margin-bottom:40px;
+}
+
+.about {
+ max-width:850px;
+ margin:auto;
+ padding:35px;
+ text-align:center;
+ background:#151424;
+ border:1px solid #49316c;
+ border-radius:18px;
+ color:#ccc5d9;
+ line-height:1.9;
+}
+
+.grid {
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:22px;
+}
+
+.card {
+ padding:28px;
+ background:#151424;
+ border:1px solid #34264b;
+ border-radius:15px;
+ transition:.3s;
+}
+
+.card:hover {
+ transform:translateY(-7px);
+ border-color:#b17aff;
+ box-shadow:0 10px 30px #782cbd33;
+}
+
+.emoji {
+ font-size:38px;
+ margin-bottom:17px;
+}
+
+.card h3 {
+ color:#c49aff;
+ margin-bottom:12px;
+}
+
+.card p {
+ color:#aaa5b5;
+ font-size:14px;
+ line-height:1.8;
+}
+
+.video {
+ background:#151424;
+ border:1px solid #392750;
+ border-radius:15px;
+ overflow:hidden;
+ transition:.3s;
+}
+
+.video:hover {
+ transform:translateY(-7px);
+}
+
+.thumb {
+ height:160px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-size:55px;
+ background:linear-gradient(130deg,#29164b,#7537a9);
+}
+
+.video-info {
+ padding:22px;
+}
+
+.video-info h3 {
+ margin-bottom:12px;
+}
+
+.video-info p {
+ color:#aaa;
+ font-size:14px;
+ line-height:1.7;
+}
+
+.video-info a {
+ display:inline-block;
+ color:#c39aff;
+ margin-top:17px;
+ text-decoration:none;
+}
+
+.banner {
+ text-align:center;
+ padding:55px 20px;
+ border-radius:20px;
+ border:1px solid #7945b0;
+ background:linear-gradient(120deg,#291447,#542580);
+}
+
+.banner h2 {
+ font-size:32px;
+ margin-bottom:18px;
+}
+
+.banner p {
+ color:#e1d5f1;
+ margin-bottom:25px;
+ line-height:1.8;
+}
+
+footer {
+ padding:35px 15px;
+ text-align:center;
+ background:#111120;
+ color:#aaa;
+ line-height:2;
+}
+
+footer span {
+ color:#bd91ff;
+}
+
+@media(max-width:650px) {
+ header {
+  flex-direction:column;
+  gap:16px;
+ }
+ nav {
+  justify-content:center;
+ }
+ section {
+  padding:55px 6%;
+ }
+}
+.editor-studio {
+  background:#11101f;
+  border:1px solid #7043a0;
+  border-radius:18px;
+  padding:22px;
+  margin:20px auto;
+  max-width:900px;
+}
+
+.editor-studio input,
+.editor-studio button {
+  margin:8px 3px;
+  padding:12px;
+  border-radius:8px;
+}
+
+.editor-studio input {
+  max-width:100%;
+  background:#252239;
+  color:white;
+  border:1px solid #684b91;
+}
+
+.editor-studio button {
+  background:#793ce0;
+  color:white;
+  border:0;
+  font-weight:bold;
+}
+
+.editor-studio canvas,
+.editor-studio video {
+  display:block;
+  max-width:100%;
+  max-height:400px;
+  margin:20px auto;
+  border-radius:10px;
+  background:#05050a;
+}
+
+.editor-studio label {
+  display:block;
+  margin-top:15px;
+  color:#c9a8ff;
+}
+
+.editor-studio input[type=range] {
+  width:100%;
+}
+
+.editor-studio .tool-row {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:5px;
+}
+
+.editor-studio h3 {
+  color:#c49aff;
+  margin:20px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="logo">✦ CMB 90</div>
+
+ <nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#videos">Videos</a>
+  <a href="#process">Process</a>
+ </nav>
+</header>
+
+<main>
+
+<div class="hero" id="home">
+
+ <div class="profile">🎬</div>
+
+ <div class="tag">WELCOME TO MY CREATIVE WORLD</div>
+
+ <h1>
+ CREATIVE<br>
+ <span>MINDED BOY 90</span>
+ </h1>
+
+ <p>
+ Welcome to my official website!
+ Explore my YouTube channel, creative videos,
+ editing journey and behind-the-scenes work.
+ </p>
+
+ <div class="buttons">
+  <a class="btn"
+  href="https://youtube.com/@amanthesort99"
+  target="_blank">
+  ▶ VISIT MY CHANNEL
+  </a>
+
+  <a class="btn secondary" href="#about">
+  EXPLORE MORE
+  </a>
+ </div>
+
+</div>
+
+<section id="about">
+
+ <h2 class="heading">ABOUT <span>ME</span></h2>
+
+ <p class="subtitle">Know more about my creative journey.</p>
+
+ <div class="about">
+
+  <h2 style="color:#c49aff;margin-bottom:15px">
+  Creative Minded Boy 90
+  </h2>
+
+  Hello everyone! Welcome to my creative world.
+
+  I love creating videos, exploring new ideas,
+  learning technology and sharing my creativity
+  through YouTube.
+
+  <br><br>
+
+  This website showcases my content,
+  video-making process and creative projects.
+
+  <br><br>
+
+  <strong style="color:#c49aff">
+  THINK CREATIVE. CREATE DIFFERENT. 🚀
+  </strong>
+
+ </div>
+</section>
+
+<section id="videos">
+
+ <h2 class="heading">MY <span>VIDEOS</span></h2>
+
+ <p class="subtitle">
+ Explore my YouTube content and latest creations.
+ </p>
+
+ <div class="grid">
+
+  <div class="video">
+   <div class="thumb">🎮</div>
+   <div class="video-info">
+    <h3>Gaming Videos</h3>
+    <p>Gameplay, gaming moments and entertainment.</p>
+    <a href="https://youtube.com/@amanthesort99"
+    target="_blank">Watch Videos →</a>
+   </div>
+  </div>
+
+  <div class="video">
+   <div class="thumb">🎬</div>
+   <div class="video-info">
+    <h3>Creative Content</h3>
+    <p>My creative ideas and original video projects.</p>
+    <a href="https://youtube.com/@amanthesort99"
+    target="_blank">Watch Videos →</a>
+   </div>
+  </div>
+
+  <div class="video">
+   <div class="thumb">✨</div>
+   <div class="video-info">
+    <h3>Special Projects</h3>
+    <p>Explore my experiments and special creations.</p>
+    <a href="https://youtube.com/@amanthesort99"
+    target="_blank">Watch Videos →</a>
+   </div>
+  </div>
+
+ </div>
+</section>
+
+<section id="process">
+
+ <h2 class="heading">MY VIDEO <span>PROCESS</span></h2>
+
+ <p class="subtitle">
+ How I turn an idea into a YouTube video.
+ </p>
+
+ <div class="grid">
+
+  <div class="card">
+   <div class="emoji">💡</div>
+   <h3>01. Planning</h3>
+   <p>I think of interesting ideas and plan my content.</p>
+  </div>
+
+  <div class="card">
+   <div class="emoji">📹</div>
+   <h3>02. Recording</h3>
+   <p>I record gameplay or other video content.</p>
+  </div>
+
+  <div class="card">
+   <div class="emoji">✂️</div>
+   <h3>03. Editing</h3>
+   <p>I edit clips and add effects, music and transitions.</p>
+  </div>
+
+  <div class="card">
+   <div class="emoji">🖼️</div>
+   <h3>04. Thumbnail</h3>
+   <p>I design an attractive thumbnail for my video.</p>
+  </div>
+
+  <div class="card">
+   <div class="emoji">🚀</div>
+   <h3>05. Uploading</h3>
+   <p>I upload my finished video to YouTube.</p>
+  </div>
+
+ </div>
+</section>
+
+<section>
+ <div class="banner">
+  <h2>LET'S CONNECT! 🔥</h2>
+
+  <p>
+  Follow my YouTube journey and explore
+  my creative content.
+  </p>
+
+  <a class="btn"
+  href="https://youtube.com/@amanthesort99"
+  target="_blank">
+  VISIT MY YOUTUBE CHANNEL
+  </a>
+ </div>
+</section>
+
+</main>
+
+<footer>
+ <p>© 2026 <span>Creative Minded Boy 90</span></p>
+ <p>Made with creativity and passion ✦</p>
+</footer>
+
+<section id="studio">
+<h2 class="heading">PROFESSIONAL <span>EDITING STUDIO</span></h2>
+<p class="subtitle">Create. Edit. Download. All in your browser.</p>
+
+<div class="editor-studio">
+
+<h3>📸 PHOTO EDITOR</h3>
+
+<input type="file" id="photoFile" accept="image/*">
+
+<canvas id="photoCanvas" width="600" height="400"></canvas>
+
+<label>Brightness</label>
+<input type="range" id="brightness" min="0" max="200" value="100">
+
+<label>Contrast</label>
+<input type="range" id="contrast" min="0" max="200" value="100">
+
+<label>Saturation</label>
+<input type="range" id="saturation" min="0" max="200" value="100">
+
+<label>Add text to photo</label>
+<input id="photoText" placeholder="Enter your text">
+
+<div class="tool-row">
+<button onclick="rotatePhoto()">↻ Rotate</button>
+<button onclick="resetPhoto()">Reset</button>
+<button onclick="downloadPhoto()">Download Photo</button>
+</div>
+
+<hr style="border-color:#44305d;margin:30px 0">
+
+<h3>🎬 VIDEO EDITOR</h3>
+
+<input type="file" id="videoFile" accept="video/*">
+
+<video id="videoPreview" controls playsinline></video>
+
+<label>Start time (seconds)</label>
+<input type="number" id="startTime" min="0" value="0">
+
+<label>End time (seconds)</label>
+<input type="number" id="endTime" min="0" value="10">
+
+<label>Playback speed</label>
+<select id="speed">
+<option value="0.5">0.5x</option>
+<option value="1" selected>1x</option>
+<option value="1.5">1.5x</option>
+<option value="2">2x</option>
+</select>
+
+<div class="tool-row">
+<button onclick="playVideo()">▶ Play</button>
+<button onclick="pauseVideo()">⏸ Pause</button>
+<button onclick="muteVideo()">🔇 Mute / Unmute</button>
+<button onclick="exportVideo()">Export Trimmed Video</button>
+</div>
+
+<p id="editorStatus" style="color:#c49aff;margin-top:15px">
+Your files stay in your browser.
+</p>
+
+</div>
+</section>
+
+<script>
+const canvas = document.getElementById("photoCanvas");
+const ctx = canvas.getContext("2d");
+let photo = new Image();
+let photoReady = false;
+let rotation = 0;
+
+function drawPhoto() {
+ if (!photoReady) return;
+
+ canvas.width = rotation % 180 === 0 ? photo.width : photo.height;
+ canvas.height = rotation % 180 === 0 ? photo.height : photo.width;
+
+ ctx.save();
+ ctx.translate(canvas.width/2,canvas.height/2);
+ ctx.rotate(rotation*Math.PI/180);
+
+ ctx.filter =
+ `brightness(${brightness.value}%) contrast(${contrast.value}%) saturate(${saturation.value}%)`;
+
+ ctx.drawImage(photo,-photo.width/2,-photo.height/2);
+ ctx.filter = "none";
+
+ ctx.restore();
+
+ const txt = document.getElementById("photoText").value;
+ if(txt) {
+  ctx.font = "bold 32px Arial";
+  ctx.textAlign = "center";
+  ctx.lineWidth = 4;
+  ctx.strokeStyle = "black";
+  ctx.fillStyle = "white";
+  ctx.strokeText(txt,canvas.width/2,canvas.height-30);
+  ctx.fillText(txt,canvas.width/2,canvas.height-30);
+ }
+}
+
+photoFile.onchange = e => {
+ const file = e.target.files[0];
+ if(!file) return;
+ photo.src = URL.createObjectURL(file);
+ photo.onload = () => {
+  photoReady = true;
+  rotation = 0;
+  drawPhoto();
+ };
+};
+
+["brightness","contrast","saturation","photoText"].forEach(id => {
+ document.getElementById(id).addEventListener("input",drawPhoto);
+});
+
+function rotatePhoto() {
+ rotation = (rotation+90)%360;
+ drawPhoto();
+}
+
+function resetPhoto() {
+ brightness.value=100;
+ contrast.value=100;
+ saturation.value=100;
+ photoText.value="";
+ rotation=0;
+ drawPhoto();
+}
+
+function downloadPhoto() {
+ if(!photoReady) return alert("Upload a photo first");
+ const a=document.createElement("a");
+ a.download="creative-edited-photo.png";
+ a.href=canvas.toDataURL("image/png");
+ a.click();
+}
+
+const video=document.getElementById("videoPreview");
+
+videoFile.onchange=e=>{
+ const file=e.target.files[0];
+ if(!file)return;
+ video.src=URL.createObjectURL(file);
+};
+
+function playVideo() {
+ video.playbackRate=Number(speed.value);
+ video.currentTime=Number(startTime.value);
+ video.play();
+}
+
+function pauseVideo() {
+ video.pause();
+}
+
+function muteVideo() {
+ video.muted=!video.muted;
+}
+
+let recorder;
+let chunks=[];
+
+async function exportVideo() {
+ if(!video.src || !video.duration)
+  return alert("Upload a video first");
+
+ const start=Number(startTime.value);
+ const end=Number(endTime.value);
+
+ if(start<0 || end<=start || end>video.duration)
+  return alert("Please enter valid start and end times");
+
+ if(!video.captureStream || !window.MediaRecorder)
+  return alert("Video export is not supported in this browser.");
+
+ try {
+  video.pause();
+  video.currentTime=start;
+  await new Promise(resolve=>{
+   video.onseeked=resolve;
+  });
+
+  const stream=video.captureStream();
+  const mime=MediaRecorder.isTypeSupported("video/webm;codecs=vp9")
+   ? "video/webm;codecs=vp9" : "video/webm";
+
+  chunks=[];
+  recorder=new MediaRecorder(stream,{mimeType:mime});
+
+  recorder.ondataavailable=e=>{
+   if(e.data.size)chunks.push(e.data);
+  };
+
+  recorder.onstop=()=>{
+   const blob=new Blob(chunks,{type:"video/webm"});
+   const url=URL.createObjectURL(blob);
+   const a=document.createElement("a");
+   a.href=url;
+   a.download="creative-edited-video.webm";
+   a.click();
+   setTimeout(()=>URL.revokeObjectURL(url),60000);
+   editorStatus.textContent="Video export completed!";
+  };
+
+  recorder.start();
+  editorStatus.textContent="Exporting video... Please wait.";
+  await video.play();
+
+  const check=()=>{
+   if(video.currentTime>=end) {
+    video.pause();
+    if(recorder.state==="recording")recorder.stop();
+   } else if(recorder.state==="recording") {
+    requestAnimationFrame(check);
+   }
+  };
+  requestAnimationFrame(check);
+
+ } catch(error) {
+  editorStatus.textContent="Export failed: "+error.message;
+ }
+}
+</script>
+
+</body>
+</html>
+
